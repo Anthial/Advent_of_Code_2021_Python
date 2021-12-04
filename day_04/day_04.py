@@ -41,21 +41,15 @@ def mark_marked_board(t_order, board, marked_board):
 
 def do_bingo():
     order, boards, marked_boards = process_input()
-    counter = 0
-    while counter < len(order):
-        t_order = order[counter]
+    for t_order in order:
         for i, board in enumerate(boards):
             value = mark_marked_board(t_order, board, marked_boards[i])
             if value:
                 return value*np.sum(np.ma.masked_array(board, marked_boards[i]))
-        counter += 1
 
 def let_the_squid_win():
     order, boards, marked_boards = process_input()
-    counter = 0
-    return_value = 0
-    while counter < len(order):
-        t_order = order[counter]
+    for t_order in order:
         new_boards = []
         new_marked_boards = []
         for i, board in enumerate(boards):
@@ -69,7 +63,6 @@ def let_the_squid_win():
             break
         boards = np.array(new_boards)
         marked_boards = np.array(new_marked_boards)
-        counter += 1
     return return_value
 
 if __name__ == "__main__":
