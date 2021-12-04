@@ -1,4 +1,4 @@
-#Do I need regex for this? No, am I lazy enough to use it anyway? Yes. 
+#Do I need regex for this? No, am I lazy enough to use it anyway? Yes. (I think I should specify that this is actually just prep for future AoC days, in case I need to remember how to do basic regex)
 import re
 
 def part_1():
