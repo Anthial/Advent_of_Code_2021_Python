@@ -59,11 +59,8 @@ def let_the_squid_win():
             elif not value:
                 new_boards.append(board)
                 new_marked_boards.append(marked_boards[i])
-        if len(new_boards) == 0:
-            break
         boards = np.array(new_boards)
         marked_boards = np.array(new_marked_boards)
-    return return_value
 
 if __name__ == "__main__":
     print(do_bingo())
